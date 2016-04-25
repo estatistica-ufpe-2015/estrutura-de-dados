@@ -28,7 +28,7 @@ struct pilhaVet
 
 typedef struct pilha Pilha;
 
-Pilha *pilha_cria(void)
+Pilha* pilha_cria(void)
 {
 	Pilha *p=(Pilha *)malloc(sizeof(Pilha));
 	p->prim=NULL;
@@ -98,11 +98,11 @@ void pilha_imprime (Pilha* p)
 	printf("\n");
 }
 
-Pilha *copia_pilha_lista(Pilha *p){
+Pilha* copia_pilha_lista(Pilha *p){
 
-	Pilha *aux = pilha_cria();
-	Pilha *f = pilha_cria();
-	Lista *t = p->prim;
+	Pilha* aux = pilha_cria();
+	Pilha* f = pilha_cria();
+	Lista* t = p->prim;
 	while(t != NULL) {
 		pilha_push(aux, t->info);
 		t = t->prox;
